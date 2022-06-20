@@ -1,0 +1,71 @@
+@import url("header.css");
+@import url("title.css");
+@import url("about.css");
+@import url("skills.css");
+@import url("academic.css");
+@import url("experience.css");
+@import url("contact.css");
+@import url("footer.css");
+
+body {
+    font-family: 'Raleway';
+
+    background-color: var(--background);
+    color: var(--white);
+
+    min-width: 360px;
+}
+
+:root {
+    --grey: #464646;
+    --white: #FFF;
+
+    --background: #0E0E10;
+    --background-base: #18181B;
+
+    --background-button: hsla(0, 0%, 100%, 0.15);
+    --background-button-hover: rgba(255, 255, 255, 0.342);
+
+    --background-form: #464649;
+    --form-border: #5E5E60;
+
+    --scrollbar: #69696B;
+    --scrollbar-background: #a6a6ad;
+
+    --warning-error: #c91c1c;
+    --warning-success: #4a9637;
+}
+
+.container {
+    box-sizing: border-box;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0;
+}
+
+ ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+
+    background-color: var(--scrollbar-background);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background-color: var(--scrollbar);
+}
+
+@media screen and (min-width: 0) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 0;
+    }
+}
