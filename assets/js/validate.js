@@ -45,3 +45,16 @@ document.querySelector('.formcontato__botao').onclick = (event) => {
 
     sendWarn('Dados validos, porém essa função está desativada!', redColor);
 }
+
+var disabledButtons = document.getElementsByClassName('experience__disabled')
+for (const key in disabledButtons) {
+    if (Object.hasOwnProperty.call(disabledButtons, key)) {
+        const element = disabledButtons[key];
+
+        element.onclick = (event) => {
+            event.preventDefault();
+
+            element.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-error');
+        }
+    }
+}
