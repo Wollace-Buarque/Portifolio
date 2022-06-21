@@ -12,26 +12,8 @@
     font-weight: 700;
 }
 
-.academic__courses {
-    display: flex;
-
-    justify-content: space-around;
-}
-
-.academic__courses__box {
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
-}
-
 .academic__courses__item__image img {
-    width: 368px;
-    height: 286px;
-
     border-radius: 1%;
-
-    padding: 1rem 0;
 }
 
 .academic__courses__item__title {
@@ -43,8 +25,31 @@
 .academic__courses__item__subtitle {
     font-size: 1rem;
     font-weight: 500;
-    line-height: 19px;
+    line-height: 1.188rem;
 }
+
+.academic__courses {
+    display: flex;
+
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.academic__courses__box {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.academic__courses__box:hover {
+    transform: scale(1.05);
+    transition: transform .1s ease-in-out;
+}
+
 
 @media screen and (min-width: 0) {
     .academic__title {
@@ -52,41 +57,44 @@
         line-height: 1.625rem;
     }
 
-    .academic__courses {
-        flex-direction: column;
+    .academic__courses__item__image img {
+        width: 300px;
+        height: 150px;
+    }
 
-        padding: 0;
+    .academic__courses {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
     .academic__courses__box {
-        padding: 1rem 0;
-    }
-
-    .academic__courses__item__image img {
-        width: 300px;
-        height: 200px;
-        padding: 0.5rem 0;
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .skills .container {
+        padding: 2rem 0;
+    }
+
     .academic__title {
         font-size: 2rem;
         line-height: 2.375rem;
     }
 
+    .academic__courses__item__image img {
+        width: 90%;
+        height: 286px;
+    }
+
     .academic__courses {
         flex-direction: row;
-        padding: 2rem 0;
+        flex-wrap: wrap;
     }
 
     .academic__courses__box {
-        padding: 0;
-    }
-
-    .academic__courses__item__image img {
-        width: 368px;
-        height: 286px;
-        padding: 1rem 0;
+        width: calc(33.33% - 1rem);
     }
 }
