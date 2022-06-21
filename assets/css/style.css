@@ -10,15 +10,17 @@
 body {
     font-family: 'Raleway';
 
-    background-color: var(--background);
-    color: var(--white);
-
     min-width: 360px;
+
+    background-color: var(--background);
+    color: var(--color-text-base);
 }
 
 :root {
     --grey: #464646;
     --white: #FFF;
+
+    --color-text-base: #EFEFF1;
 
     --background: #0E0E10;
     --background-base: #18181B;
@@ -56,6 +58,24 @@ body {
     border-radius: 10px;
 
     background-color: var(--scrollbar);
+}
+
+/* Não deixar navegadores mudar as cores dos inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    font-family: 'Raleway';
+
+    transition: background-color 50000s ease-in-out 0s;
+
+    -webkit-text-fill-color: var(--white);
+    --webkit-box-shadow: 0 0 0px 1000px var(--background-form) inset;
 }
 
 @media screen and (min-width: 0) {

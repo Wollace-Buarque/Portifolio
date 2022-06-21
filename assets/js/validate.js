@@ -22,6 +22,7 @@ function sendWarn(message, color) {
     warnId = setTimeout(() => {
 
         warnQuery.style.opacity = 0;
+        warnQuery.textContent = "";
 
     }, 3000);
 }

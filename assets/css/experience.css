@@ -1,4 +1,6 @@
 .experience .container {
+    display: flex;
+    flex-direction: column;
     padding: 2rem 0;
 }
 
@@ -21,7 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    
     gap: 1rem;
 }
 
@@ -33,9 +35,15 @@
     font-weight: 500;
 }
 
+.experience__description {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .experience__botao--repo {
-    background-color: transparent;
+    font-family: 'Raleway';
     cursor: pointer;
+    background-color: transparent;
 
     width: 105px;
     height: 51px;
@@ -46,11 +54,6 @@
     color: var(--white);
 }
 
-.experience__description {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
 .experience__botao--repo:hover {
     color: var(--background);
     background-color: var(--white);
@@ -59,13 +62,14 @@
 }
 
 .experience__botao--demo {
+    font-family: 'Raleway';
     cursor: pointer;
 
     width: 105px;
     height: 51px;
     border-radius: 5%;
 
-    color: var(--white);
+    color: var(--color-text-base);
 
     border: 1px solid var(--background-base);
     background-color: var(--background-button);
@@ -92,23 +96,27 @@
         line-height: 1rem;
     }
 
-    .experience__box {
-        flex-direction: column;
-
-        align-items: center;
-
-        padding: 2rem 0;
-    }
-
     .experience__image {
         width: 300px;
         height: 150px;
     }
 
-    .experience__info {
-        padding: 1.5rem 0;
+    .experience__box {
+        flex-direction: column;
+        width: 100%;
 
         align-items: center;
+        text-align: center;
+
+        padding: 2rem 0;
+    }
+
+    .experience__info {
+        padding: 1rem 0;
+    }
+
+    .experience__description {
+        justify-content: center;
     }
 }
 
@@ -128,22 +136,29 @@
         line-height: 19px;
     }
 
-    .experience__box {
-        flex-direction: row;
-
-        align-items: unset;
-
-        padding: 2rem 5rem;
-    }
-
     .experience__image {
         width: 600px;
         height: max-content;
     }
 
-    .experience__info {
-        padding: 0 5rem;
+    .experience__box {
+        flex-direction: row;
+        justify-content: center;
 
-        align-items: unset;
+        align-items: initial;
+        text-align: initial;
+    }
+
+    .experience__info {
+        text-align: start;
+
+        padding: 0;
+        padding-left: 2rem;
+
+        width: 350px;
+    }
+
+    .experience__description {
+        justify-content: start;
     }
 }
