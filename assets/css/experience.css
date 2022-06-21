@@ -149,6 +149,10 @@
         text-align: initial;
     }
 
+    .experience__box:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
     .experience__info {
         text-align: start;
 
