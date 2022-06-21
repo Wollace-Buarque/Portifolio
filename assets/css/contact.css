@@ -1,10 +1,7 @@
 .formcontato {
-    background-color: var(--background-base);
-}
+    padding: 2.5rem 0;
 
-.formcontato .container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    background-color: var(--background-base);
 }
 
 .formcontato__text {
@@ -145,7 +142,6 @@
 }
 
 @media screen and (min-width: 992px) {
-    
     .formcontato__contato {
         display: flex;
         justify-content: center;
